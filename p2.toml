@@ -25,10 +25,8 @@ k1 = 0.9
 b = 0.4
 
 [hybrid]
-# Score fusion of these two systems: each one's top `depth` scores scaled to 0-1, then averaged.
-# Not RRF: k = 60 scored below both systems here, and k = 10 does not reproduce in CI (see hybrid.py).
-systems = ["bm25", "dense"]
-depth = 100
+# Score fusion: bm25_weight * bm25 / (the query's best bm25 score) + dense cosine (see hybrid.py for why).
+bm25_weight = 0.1
 
 [rerank]
 # The reranker's first stage: RRF of these systems with this k, and how many candidates Claude sees.

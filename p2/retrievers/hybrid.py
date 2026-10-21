@@ -1,23 +1,27 @@
-"""Hybrid retrieval: score fusion of bm25 and dense.
+"""Hybrid retrieval: a weighted sum of bm25 and dense scores.
 
-Each system's top 100 scores are scaled to 0-1 (the best becomes 1, the 100th becomes 0), and a
-document's fused score is the mean of its scaled scores (0 from a system that does not rank it in
-its top 100). search_chunks does the same over chunk rankings, so `p2 answer` can use hybrid's chunks.
+A document's fused score is w * bm25 / (the query's best bm25 score) + its dense cosine similarity,
+with w = 0.1, over every document. search_chunks does the same over chunks, so `p2 answer` can use
+hybrid's chunks.
 
-Why not the reciprocal rank fusion (RRF) of the 13 lab: on the shared practice queries RRF with the
-lab's k = 60 scored below both bm25 and dense (MRR@10 0.471), because bm25 and dense find different
-sections and k = 60 rewards a section both rank in the middle over one that either ranks first.
-RRF with k = 10 fixed that (MRR@10 0.587) but did not reproduce in CI: dense's scores differ by about
-0.000002 between macOS and Linux, enough to swap two near-tied sections, and with k = 10 one place
-moves a fused score by more than the 0.001 that `p2 check` allows. Score fusion moves only as much as
-the scores do (MRR@10 0.581, and no mismatch in 100 noisy trials). rrf() stays here because the
-reranker's first stage uses it, and CI never runs the reranker again.
+Why this form, after three that did not work (all measured on the shared practice queries):
+- Reciprocal rank fusion (RRF) with the 13 lab's k = 60: MRR@10 0.471, below bm25 and dense. bm25 and
+  dense find different sections, and k = 60 rewards a section both rank in the middle over one that
+  either ranks first.
+- RRF with k = 10: MRR@10 0.587, but CI could not reproduce it. dense's scores differ by about 0.0001
+  between macOS and Linux, enough to swap near-tied sections, and with k = 10 one place moves a fused
+  score by more than the 0.001 that `p2 check` allows.
+- Each system's top-100 scores scaled to 0-1 and averaged: MRR@10 0.581, but the scaling divides
+  dense's small spread (about 0.1), which multiplies that noise past 0.001 too.
+bm25's scores are exact on every machine, so scaling them is safe; dense's cosine passes through
+unscaled, so the fused score moves no more than dense's own score does. With w = 0.1 the practice
+MRR@10 is 0.642 (0.547 at w = 0.2, 0.533 at w = 0.3), and noise of 0.0001 broke none of 300 trials.
+rrf() stays here because the reranker's first stage uses it, and CI never runs the reranker again.
 
 Settings, all optional, in p2.toml:
 
     [hybrid]
-    systems = ["bm25", "dense"]
-    depth = 100
+    bm25_weight = 0.1
 """
 
 from __future__ import annotations
@@ -37,33 +41,28 @@ def rrf(rankings: list[list[tuple[str, float]]], k: int) -> list[tuple[str, floa
     return order(scores.items())
 
 
-def scaled_sum(rankings: list[list[tuple[str, float]]], depth: int) -> list[tuple[str, float]]:
-    """Fuse rankings by the mean of each one's top-`depth` scores scaled to 0-1."""
-    fused: dict[str, float] = {}
-    for ranking in rankings:
-        top = ranking[:depth]
-        if not top:
-            continue
-        hi, lo = top[0][1], top[-1][1]
-        span = (hi - lo) or 1.0
-        for item, score in top:
-            fused[item] = fused.get(item, 0.0) + (score - lo) / span / len(rankings)
-    return order(fused.items())
+def weighted_sum(keyword: list[tuple[str, float]], dense: list[tuple[str, float]], weight: float) -> list[tuple[str, float]]:
+    """weight * keyword score / the best keyword score + dense score, for every item dense ranks."""
+    best = keyword[0][1] if keyword and keyword[0][1] > 0 else 1.0
+    scaled = {item: score / best for item, score in keyword}
+    return order((item, weight * scaled.get(item, 0.0) + score) for item, score in dense)
 
 
 class Hybrid:
     def __init__(self, corpus, cfg):
-        settings = cfg.table("hybrid")
-        self.depth = int(settings.get("depth", 100))
-        self.systems = [build_system(name, corpus, cfg) for name in settings.get("systems", ["bm25", "dense"])]
+        self.weight = float(cfg.table("hybrid").get("bm25_weight", 0.1))
+        self.bm25 = build_system("bm25", corpus, cfg)
+        self.dense = build_system("dense", corpus, cfg)
+        self.n_docs = len(corpus.docs)
+        self.n_chunks = len(corpus.chunks(cfg.chunk_words, cfg.chunk_overlap))
 
     def search(self, text: str, k: int) -> list[tuple[str, float]]:
-        depth = max(self.depth, k)
-        return scaled_sum([s.search(text, depth) for s in self.systems], depth)[:k]
+        n = self.n_docs
+        return weighted_sum(self.bm25.search(text, n), self.dense.search(text, n), self.weight)[:k]
 
     def search_chunks(self, text: str, k: int) -> list[tuple[str, float]]:
-        depth = max(self.depth, k)
-        return scaled_sum([s.search_chunks(text, depth) for s in self.systems], depth)[:k]
+        n = self.n_chunks
+        return weighted_sum(self.bm25.search_chunks(text, n), self.dense.search_chunks(text, n), self.weight)[:k]
 
 
 def build(corpus, cfg):
