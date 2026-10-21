@@ -250,6 +250,9 @@ Change one thing and keep everything else the same.
 Write your hypothesis here before you run it, in one sentence with a direction: "I expect X to raise MRR@10 on my corpus because Y."
 The run file for it lives in `runs/own/ablation/`.
 
+**Hypothesis** (written before the run, 2026-10-21; the change is `dense` with 100-word chunks instead of 300, in `p2/retrievers/dense_c100.py`):
+The articles that I have are a lot longer when compared to the regulation sections. So having a smaller chunk will hold fewer topics, but it will be more precise as the facts in the chunk take up a larger portion. For example, when looking at Cheyenne Mountain State Park article, it is hard to find information about dogs and is buried. Therefore, by lowering the words in the chunk, you are able to see the information about dog allowability as it has its own section in the chunk. From this, I expect it to raise MRR@10. But it will make generic statements less accurate while having the precise question more accurate.
+
 <!-- p2:begin own-ablation -->
 _No ablation runs yet: `uv run p2 run --corpus own --system NAME --ablation` writes one to runs/own/ablation/, then `uv run p2 score` fills this table._
 <!-- p2:end own-ablation -->
