@@ -38,6 +38,7 @@ Scores per system.
 | dense | 0.558 | 0.562 | 0.480 |
 | hybrid | 0.608 | 0.642 | 0.568 |
 | rerank | 0.758 | 0.850 | 0.777 |
+| rerank_c10 | 0.817 | 0.856 | 0.796 |
 
 20 judged queries; nDCG uses binary labels; a random ranking of the 2,484 documents would get recall@10 near 0.004.
 <!-- p2:end shared-practice -->
@@ -59,6 +60,9 @@ The same scores per query class.
 | rerank | Recall@10 | 0.786 | 0.595 | 0.917 |
 | rerank | MRR@10 | 0.857 | 0.714 | 1.000 |
 | rerank | nDCG@10 | 0.805 | 0.626 | 0.922 |
+| rerank_c10 | Recall@10 | 1.000 | 0.548 | 0.917 |
+| rerank_c10 | MRR@10 | 0.873 | 0.714 | 1.000 |
+| rerank_c10 | nDCG@10 | 0.891 | 0.592 | 0.922 |
 <!-- p2:end shared-practice-classes -->
 
 Differences between every pair of systems, each with its paired interval and the minimum detectable difference.
@@ -84,6 +88,18 @@ Differences between every pair of systems, each with its paired interval and the
 | rerank minus hybrid | Recall@10 | +0.150 | [+0.000, +0.350] | 0.251 | not distinguishable |
 | rerank minus hybrid | MRR@10 | +0.208 | [+0.050, +0.392] | 0.242 | rerank higher |
 | rerank minus hybrid | nDCG@10 | +0.209 | [+0.059, +0.387] | 0.238 | rerank higher |
+| rerank_c10 minus bm25 | Recall@10 | +0.192 | [+0.050, +0.358] | 0.223 | rerank_c10 higher |
+| rerank_c10 minus bm25 | MRR@10 | +0.348 | [+0.115, +0.576] | 0.335 | rerank_c10 higher |
+| rerank_c10 minus bm25 | nDCG@10 | +0.277 | [+0.088, +0.467] | 0.274 | rerank_c10 higher |
+| rerank_c10 minus dense | Recall@10 | +0.258 | [+0.083, +0.450] | 0.270 | rerank_c10 higher |
+| rerank_c10 minus dense | MRR@10 | +0.293 | [+0.122, +0.476] | 0.257 | rerank_c10 higher |
+| rerank_c10 minus dense | nDCG@10 | +0.316 | [+0.159, +0.484] | 0.237 | rerank_c10 higher |
+| rerank_c10 minus hybrid | Recall@10 | +0.208 | [+0.050, +0.384] | 0.242 | rerank_c10 higher |
+| rerank_c10 minus hybrid | MRR@10 | +0.214 | [+0.058, +0.394] | 0.240 | rerank_c10 higher |
+| rerank_c10 minus hybrid | nDCG@10 | +0.228 | [+0.091, +0.388] | 0.214 | rerank_c10 higher |
+| rerank_c10 minus rerank | Recall@10 | +0.058 | [-0.033, +0.183] | 0.163 | not distinguishable |
+| rerank_c10 minus rerank | MRR@10 | +0.006 | [+0.000, +0.017] | 0.016 | not distinguishable |
+| rerank_c10 minus rerank | nDCG@10 | +0.018 | [-0.023, +0.067] | 0.070 | not distinguishable |
 
 The interval is a paired bootstrap (10,000 resamples of the queries); MDD is the smallest difference this many queries detect 80% of the time.
 <!-- p2:end shared-practice-pairs -->
@@ -382,6 +398,7 @@ Every trace in traces/ that records a Claude call:
 | traces/answers-rerank.jsonl | rerank | 12 | 24 | 4 | 267,263 | 11,358 | 169.8 | 22,272 | 946 | 14.1 |
 | traces/own-own-rerank.jsonl | rerank | 31 | 31 | 2 | 464,993 | 7,929 | 146.9 | 15,000 | 256 | 4.7 |
 | traces/shared-practice-rerank.jsonl | rerank | 20 | 20 | 2 | 326,305 | 6,857 | 123.5 | 16,315 | 343 | 6.2 |
+| traces/shared-practice-rerank_c10.jsonl | rerank_c10 | 20 | 20 | 2 | 271,507 | 4,201 | 97.3 | 13,575 | 210 | 4.9 |
 | traces/shared-test-rerank.jsonl | rerank | 40 | 40 | 0 | 631,306 | 13,470 | 236.5 | 15,783 | 337 | 5.9 |
 
 A span is one query of a run, one question of an answers file, or one claim of a judged file. A saved reply costs nothing now, so it counts the tokens and the seconds of the call that made it.
@@ -393,6 +410,10 @@ Every pair of systems on the same queries where at least one calls Claude, the o
 | shared practice: bm25 minus rerank | 20 | -0.343 | [-0.576, -0.100] | 16,315 | 6.2 | rerank higher |
 | shared practice: dense minus rerank | 20 | -0.287 | [-0.471, -0.117] | 16,315 | 6.2 | rerank higher |
 | shared practice: hybrid minus rerank | 20 | -0.208 | [-0.392, -0.050] | 16,315 | 6.2 | rerank higher |
+| shared practice: bm25 minus rerank_c10 | 20 | -0.348 | [-0.576, -0.115] | 13,575 | 4.9 | rerank_c10 higher |
+| shared practice: dense minus rerank_c10 | 20 | -0.293 | [-0.476, -0.122] | 13,575 | 4.9 | rerank_c10 higher |
+| shared practice: hybrid minus rerank_c10 | 20 | -0.214 | [-0.394, -0.058] | 13,575 | 4.9 | rerank_c10 higher |
+| shared practice: rerank_c10 minus rerank | 20 | +0.006 | [+0.000, +0.017] | 2,740 | 1.3 | not distinguishable |
 | own: bm25 minus rerank | 31 | -0.101 | [-0.205, -0.016] | 15,000 | 4.7 | rerank higher |
 | own: dense minus rerank | 31 | -0.161 | [-0.274, -0.056] | 15,000 | 4.7 | rerank higher |
 | own: hybrid minus rerank | 31 | -0.108 | [-0.204, -0.027] | 15,000 | 4.7 | rerank higher |
