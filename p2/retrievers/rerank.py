@@ -1,9 +1,15 @@
-"""Reranking: Claude reorders a first-stage system's top 20.
+"""Reranking: Claude reorders a first stage's top 20.
 
-A port of rerank_one() in the 13 lab's pipeline.py. The first stage (hybrid) gives its top 20; each
-one goes to Claude as a numbered passage, and the reply is forced into {"order": [20 numbers]}, each
-from 1 to 20. A reply that is not each number exactly once keeps the first-stage order. Documents
-below the 20 keep their first-stage order underneath.
+A port of rerank_one() in the 13 lab's pipeline.py. The first stage gives its top 20; each one goes
+to Claude as a numbered passage, and the reply is forced into {"order": [20 numbers]}, each from 1
+to 20. A reply that is not each number exactly once keeps the first-stage order. Documents below the
+20 keep their first-stage order underneath.
+
+The first stage is reciprocal rank fusion (RRF, k = 10) of bm25 and dense, which puts a relevant
+section in the top 20 for 18 of the 20 shared practice queries (16 with the lab's k = 60). It is not
+the hybrid system: hybrid uses score fusion, because RRF with k = 10 does not reproduce exactly
+between macOS and Linux (see hybrid.py), and CI runs hybrid again but never the reranker, whose runs
+are checked against their traces.
 
 One change from the lab: a document's passage is its best chunk for this query in the first stage's
 chunk ranking (with the document's title in front), not the document's first characters, so a long
@@ -15,7 +21,8 @@ Every call goes through p2.claude.call, which caches the reply and adds its toke
 Settings, all optional, in p2.toml:
 
     [rerank]
-    first = "hybrid"
+    first = ["bm25", "dense"]
+    rrf_k = 10
     candidates = 20
     passage_chars = 600
 """
@@ -26,6 +33,7 @@ import sys
 
 from p2 import claude
 from p2.retrievers import build as build_system
+from p2.retrievers.hybrid import rrf
 
 NEEDS_CLAUDE = True
 
@@ -57,8 +65,17 @@ class Rerank:
         self.model = cfg.model
         self.candidates = candidates or int(settings.get("candidates", CANDIDATES))
         self.passage_chars = int(settings.get("passage_chars", PASSAGE_CHARS))
-        self.first = build_system(settings.get("first", "hybrid"), corpus, cfg)
+        self.rrf_k = int(settings.get("rrf_k", 10))
+        self.systems = [build_system(name, corpus, cfg) for name in settings.get("first", ["bm25", "dense"])]
         self.chunk_texts = corpus.chunk_texts(cfg.chunk_words, cfg.chunk_overlap)
+
+    def first_docs(self, text: str, k: int) -> list[tuple[str, float]]:
+        n = len(self.corpus.docs)
+        return rrf([s.search(text, n) for s in self.systems], self.rrf_k)[:k]
+
+    def first_chunks(self, text: str, k: int) -> list[tuple[str, float]]:
+        n = len(self.chunk_texts)
+        return rrf([s.search_chunks(text, n) for s in self.systems], self.rrf_k)[:k]
 
     def passage(self, chunk_id: str) -> str:
         docid, n = chunk_id.rsplit("#", 1)
@@ -80,12 +97,12 @@ class Rerank:
         return [items[i - 1] for i in order]
 
     def search(self, text: str, k: int) -> list[tuple[str, float]]:
-        first = [d for d, _ in self.first.search(text, max(k, self.candidates))]
+        first = [d for d, _ in self.first_docs(text, max(k, self.candidates))]
         top = first[: self.candidates]
         if not top:
             return []
         wanted, best_chunk = set(top), {}
-        for chunk_id, _ in self.first.search_chunks(text, len(self.chunk_texts)):
+        for chunk_id, _ in self.first_chunks(text, len(self.chunk_texts)):
             docid = chunk_id.rsplit("#", 1)[0]
             if docid in wanted and docid not in best_chunk:
                 best_chunk[docid] = chunk_id
@@ -95,7 +112,7 @@ class Rerank:
         return [(d, float(len(ranked) - i)) for i, d in enumerate(ranked)][:k]
 
     def search_chunks(self, text: str, k: int) -> list[tuple[str, float]]:
-        first = [c for c, _ in self.first.search_chunks(text, max(k, self.candidates))]
+        first = [c for c, _ in self.first_chunks(text, max(k, self.candidates))]
         top = first[: self.candidates]
         if not top:
             return []

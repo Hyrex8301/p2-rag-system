@@ -25,10 +25,17 @@ k1 = 0.9
 b = 0.4
 
 [hybrid]
-# Reciprocal rank fusion of these two systems; a smaller rrf_k trusts each one's top ranks more.
-# 10, not the lab's 60, chosen on the shared practice queries (MRR@10 0.587 against 0.471).
+# Score fusion of these two systems: each one's top `depth` scores scaled to 0-1, then averaged.
+# Not RRF: k = 60 scored below both systems here, and k = 10 does not reproduce in CI (see hybrid.py).
 systems = ["bm25", "dense"]
+depth = 100
+
+[rerank]
+# The reranker's first stage: RRF of these systems with this k, and how many candidates Claude sees.
+first = ["bm25", "dense"]
 rrf_k = 10
+candidates = 20
+passage_chars = 600
 
 [answer]
 # How many chunks `p2 answer` sends to Claude with each question.

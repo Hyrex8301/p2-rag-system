@@ -1,18 +1,23 @@
-"""Hybrid retrieval: reciprocal rank fusion (RRF) of bm25 and dense.
+"""Hybrid retrieval: score fusion of bm25 and dense.
 
-A port of rrf() in the 13 lab's pipeline.py: each document scores the sum of 1 / (k + rank) over
-the rankings it appears in, rank counted from 1. The lab's k is 60; here it is 10, chosen on the
-shared practice queries, where bm25 and dense find different sections and k = 60 buried a section
-one of them ranked first (MRR@10 0.471 at 60, 0.587 at 10). The fusion runs over full rankings (every document
-of the corpus), not top-10 lists, because a document that is 11th in both can belong in the fused
-top 10. search_chunks does the same fusion over chunk rankings, so `p2 answer` and the reranker can
-use hybrid's chunks.
+Each system's top 100 scores are scaled to 0-1 (the best becomes 1, the 100th becomes 0), and a
+document's fused score is the mean of its scaled scores (0 from a system that does not rank it in
+its top 100). search_chunks does the same over chunk rankings, so `p2 answer` can use hybrid's chunks.
 
-The two systems and the RRF constant can be changed in p2.toml:
+Why not the reciprocal rank fusion (RRF) of the 13 lab: on the shared practice queries RRF with the
+lab's k = 60 scored below both bm25 and dense (MRR@10 0.471), because bm25 and dense find different
+sections and k = 60 rewards a section both rank in the middle over one that either ranks first.
+RRF with k = 10 fixed that (MRR@10 0.587) but did not reproduce in CI: dense's scores differ by about
+0.000002 between macOS and Linux, enough to swap two near-tied sections, and with k = 10 one place
+moves a fused score by more than the 0.001 that `p2 check` allows. Score fusion moves only as much as
+the scores do (MRR@10 0.581, and no mismatch in 100 noisy trials). rrf() stays here because the
+reranker's first stage uses it, and CI never runs the reranker again.
+
+Settings, all optional, in p2.toml:
 
     [hybrid]
     systems = ["bm25", "dense"]
-    rrf_k = 10
+    depth = 100
 """
 
 from __future__ import annotations
@@ -32,20 +37,33 @@ def rrf(rankings: list[list[tuple[str, float]]], k: int) -> list[tuple[str, floa
     return order(scores.items())
 
 
+def scaled_sum(rankings: list[list[tuple[str, float]]], depth: int) -> list[tuple[str, float]]:
+    """Fuse rankings by the mean of each one's top-`depth` scores scaled to 0-1."""
+    fused: dict[str, float] = {}
+    for ranking in rankings:
+        top = ranking[:depth]
+        if not top:
+            continue
+        hi, lo = top[0][1], top[-1][1]
+        span = (hi - lo) or 1.0
+        for item, score in top:
+            fused[item] = fused.get(item, 0.0) + (score - lo) / span / len(rankings)
+    return order(fused.items())
+
+
 class Hybrid:
     def __init__(self, corpus, cfg):
         settings = cfg.table("hybrid")
-        self.corpus = corpus
-        self.rrf_k = int(settings.get("rrf_k", 10))
+        self.depth = int(settings.get("depth", 100))
         self.systems = [build_system(name, corpus, cfg) for name in settings.get("systems", ["bm25", "dense"])]
-        self.n_chunks = len(corpus.chunks(cfg.chunk_words, cfg.chunk_overlap))
 
     def search(self, text: str, k: int) -> list[tuple[str, float]]:
-        n = len(self.corpus.docs)
-        return rrf([s.search(text, n) for s in self.systems], self.rrf_k)[:k]
+        depth = max(self.depth, k)
+        return scaled_sum([s.search(text, depth) for s in self.systems], depth)[:k]
 
     def search_chunks(self, text: str, k: int) -> list[tuple[str, float]]:
-        return rrf([s.search_chunks(text, self.n_chunks) for s in self.systems], self.rrf_k)[:k]
+        depth = max(self.depth, k)
+        return scaled_sum([s.search_chunks(text, depth) for s in self.systems], depth)[:k]
 
 
 def build(corpus, cfg):
