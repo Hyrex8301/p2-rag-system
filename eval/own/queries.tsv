@@ -2,3 +2,34 @@
 # origin is hand when you wrote the query yourself and claude when a model drafted it; at least 10 must be hand.
 # class is a word you choose, for example identifier, paraphrase or mixed as in the shared sets; scores are reported per class.
 # Lines that start with # are comments, so delete these lines or keep them, as you like.
+c01	paraphrase	Where is a short but steep hike that climbs about a thousand feet along a creek to a lake perched in a canyon?	claude
+c02	identifier	When did the first trains run through the Moffat Tunnel?	claude
+c03	mixed	Highway 82 between Aspen and Twin Lakes: why is the road closed in winter?	claude
+c04	paraphrase	Where did the Army train its ski soldiers during World War II?	claude
+c05	identifier	How deep is the Royal Gorge?	claude
+c06	mixed	State Highway 149 near Lake City: which pass has the steepest paved grade in Colorado?	claude
+c07	paraphrase	Which ski area makes everyone carry avalanche gear and runs a single chairlift for experts only?	claude
+c08	identifier	How far apart are Maroon Peak and North Maroon Peak?	claude
+c09	paraphrase	What is the second-largest natural lake in the state, known for its cutthroat trout?	claude
+c10	paraphrase	What is the oldest continuously operating ski area in North America, the one with big ski jumps?	claude
+c11	identifier	How long is the Alpine Tunnel and how high is it?	claude
+c12	paraphrase	What is the tallest mountain in the whole Rocky Mountain range?	claude
+c13	mixed	Maroon Bells-Snowmass Wilderness: which fourteener there is one of the hardest to climb?	claude
+c14	paraphrase	Which lake formed when a landslide dammed a river about 700 years ago?	claude
+c15	identifier	How many runs does Ski Hesperus have?	claude
+c16	mixed	Bureau of Land Management: which national monument in southwest Colorado protects ancient archaeological sites?	claude
+c17	identifier	How long is the Colorado Trail and where does it start and end?	claude
+c18	paraphrase	Where can I see a triple waterfall pouring over a travertine dam?	claude
+c19	mixed	Arkansas River between Buena Vista and Salida: where is the most popular whitewater rafting?	claude
+c20	paraphrase	Which old railroad route crossed the Continental Divide above Winter Park before a tunnel replaced it?	claude
+c21	identifier	When did the Black Canyon of the Gunnison become a national park?	claude
+h01	identifier	how long will it take to hike bierstadt?	hand
+h02	identifier	how far does clear creek go?	hand
+h03	identifier	what is the elevation of longs peak?	hand
+h04	identifier	what is the alternate route up longs peak?	hand
+h05	paraphrase	Which lake can you hike to? In about 2 hours, that also has cliff jumping.	hand
+h06	mixed	Near elbert, what other 14er is near there?	hand
+h07	identifier	What difficulty level is sherman?	hand
+h08	identifier	Does Mount Blue Sky have a sawtooth?	hand
+h09	mixed	Am I allowed to bring my dog to the state park near Colorado Springs?	hand
+h10	identifier	How dangerous is it to hike quandary?	hand
