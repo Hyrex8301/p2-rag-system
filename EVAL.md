@@ -25,7 +25,11 @@ The minimum detectable difference is the smallest gap this many queries could re
 
 For each of `dense`, `hybrid` and `rerank`, one or two sentences: the embedding model, how documents were chunked, what was fused and how, how many candidates the reranker saw, and anything you changed from the 12 and 13 lab code.
 
-TODO: describe your three systems.
+For dense, I use the bge-small-en-v1.5 embedding model. It is the same as the lab12's bge, and it compares the query's meanings with every chunk. Each chunk has 300-word chunks with 50 words of overlap.
+
+For hybrid I did the formula of 0.1 × (bm25 ÷ the query's best bm25 score) + dense's score over every document. This changed from the lab's reciprocal rank fusion, or RRF, of k equals 60, which scored 0.471 MRR@10 on the 20 practice queries, below both bm25 (0.507) and dense (0.562). With a k equal to 10, it scored 0.587, but failed the CI, as did a scaled version (0.581). The final version scores a 0.642 and reproduces on the CI. Once again, the chunking is 300-word chunks with 50 words of overlap.
+
+For the rerank, I used Claude Sonnet version. And it reorders the top twenty from RRF of k equals 10 of BM25 and dense. The RRF k equals 10 is fine because the CI never re-runs the reranker: it calls Claude, so its runs are checked against the saved traces instead. This changed from the lab as each candidate is shown as its best matching chunk with the section title, not the start of the document. The passages are capped at 600 characters and the reply only uses numbers 1 through 20. Once again, the chunking uses 300 word chunks with 50 words of overlap.
 
 ### Practice queries (20)
 
