@@ -41,7 +41,9 @@ If you rejected the alternative without measuring it, say why that was a fair ca
 "There was no alternative" is not an answer.
 Find the fork.
 
-TODO: your answer to prompt 2.
+The largest fork in the road that I had was when trying to implement hybrid. I was using k equals 60, which is the lab's default. And I had an MRR@10 of 0.471, which is below both BM25 and dense. So I decided to switch to k equals 10, which got an MRR@10 of 0.587, but it ended up failing the CI because tiny Mac versus Linux score differences swapped near-tied sections. And on top of that, the scaled score fusion had an MRR@10 of 0.581, but it also failed CI. As the scaling multiplied the same noise. So finally, I did a weighted sum of BM25 scaled and dense raw, which got an MRR@10 of 0.642. And it was also able to pass the CI. So I had to give up the lab's standard method, RRF, and replace it with a weighted sum. The re-ranker still uses RRF with k equals 10, because the CI never reruns the re-ranker, so the change also cost no new Claude calls.
+
+The other forks in the road I had was picking between how many word chunks I wanted, which was my ablation, so I went from 300 down to 100, I also had to do my stretch goal, which I decided was showing Claude 10 versus 20 candidates. I had to weigh the risks of what changing the chunk size would actually do, as well as the risks of the stretch goal. The stretch goal ended up costing less tokens and less time, and changing from 300 to 100 was able to improve some of the issues (c09 and c18) but hurt others (h05 and h10), and still produced results that I was okay with.
 
 ---
 
