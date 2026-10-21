@@ -365,10 +365,21 @@ Pick the queries where your best system on your own corpus failed: the relevant 
 Take at least five, and read what the system returned next to what was relevant.
 Then sort the failures by cause, for example a vocabulary mismatch, near-duplicate documents, a chunk that cut the answer in half, a query that is ambiguous, or a label that was wrong, because sometimes the gold set is what failed.
 
+Re-rank was the best system, and only fell short in 2 queries, which were c03 and c04. So the table also includes other queries where the other models also fell short.
+
 | qid | what the best system returned | what was relevant | cause | what you would try |
 |---|---|---|---|---|
+| c03 | rerank: independence-pass at 1, aspen-colorado not in its top 10 (bm25, dense and hybrid had it at 3) | independence-pass, aspen-colorado | A chunk that got the answer cut off: the 600-character passage Claude saw for aspen-colorado ended just before the closure sentence | Make the chunk smaller |
+| c04 | rerank: all 6 in its top 10, but aspen-colorado at 8 and vail-ski-resort at 10; dense found only 3 of the 6 | camp-hale, ski-cooper, aspen-colorado, aspen-mountain-ski-area, tennessee-pass, vail-ski-resort | Vocabulary mismatch: the articles say troops or 10th Mountain Division instead of the soldiers in the query | Try adding synonyms |
+| c01 | dense and hybrid: not in their top 10 (eleven-mile-state-park, gore-canyon first); bm25: 5th | hanging-lake | Vocabulary mismatch: the query says thousand and climbs, the article says 1,000 feet and ascends | Try adding synonyms |
+| c12 | bm25: not in its top 10 (mount-yale first); dense 4th, hybrid 6th | mount-elbert | Vocabulary mismatch: the query says tallest and the article says highest, so bm25 is going to miss it | Treat synonyms like tallest and highest as the same word; you could also rely on dense |
+| c18 | dense: not in its top 10 (hanging-lake first); hybrid 2nd | rifle-falls-state-park | Both articles are about travertine | Use hybrid, which looks for the correct information |
+| c09 | dense: 4th (trout-lake-colorado first) | trappers-lake | Two similar articles | Instead of looking for trout, look for the second largest lake |
+| c07 | dense: 2nd (aspen-mountain-ski-area first) | silverton-mountain | Vocabulary mismatch | Try adding synonyms |
+| h02 | bm25, dense and hybrid: 2nd (mount-blue-sky or hermosa-creek-wilderness first) | clear-creek-colorado | Similar documents: two places named Clear Creek | Add more information, such as Clear Creek in Golden, Colorado |
+| h09 | bm25: 6th (castlewood-canyon-state-park first); dense and hybrid 2nd | cheyenne-mountain-state-park | Vocabulary mismatch: the query says dog and the article says Dogs | Count dog and dogs as the same word |
 
-TODO: add one row for each failure you analyzed, and write two or three sentences on the pattern you see across them.
+The cause that shows up most is a vocabulary mismatch or something similar. The system that misses the most is dense. Synonyms would help BM25, and to help dense instead you'd have to do something like read the whole sentence, so Trout Lake doesn't count for trout.
 
 ---
 
