@@ -166,7 +166,7 @@ What is it, where did it come from, how many documents and how many megabytes, a
 Name the one or two documents you were least sure about and what you decided.
 Say which of the allowed sources in the brief it comes from.
 
-TODO: describe your corpus and its license basis.
+My corpus is 278 Wikipedia articles, about 'outdoors in Colorado.' They came from multiple categories, including 14ers, mountain passes, wilderness areas, state parks, hiking trails, and National Recreation Trails. Lakes, canyons, ski areas, national monuments, and the mountains of Rocky Mountain National Park. They came from plain text through Wikipedia's API. There were 446 articles in these categories and 168 of these articles were under 150 words, so they were left out. This left a total of 278 documents, around 162,000 words, around 227,000 tokens, and 1.0 MB. Wikipedia text is CC BY-SA 4.0, with attribution, and each row in `corpora/own/manifest.tsv` links to the exact article version. Everything passed the licensing check, so I wasn't worried about the licensing. But I was more worried about the fit. And one of these documents was Aspen Colorado. Which is a town article rather than an outdoor place, but it's also categorized as one of the ski areas, so I decided to include it in there. I also had one article, Rollins Pass, that was longer than 6,000 words, so the fetch script cut it at a paragraph break down to 5,907 words. I was debating whether to keep it in or just cut it short, and I kept it in, cut to 5,907 words.
 
 ### The gold set
 
