@@ -71,7 +71,7 @@ It could be a mean over a small query class, a difference whose interval include
 What would have to be true for you to trust it?
 Did you do anything to test it, and what did that show?
 
-TODO: your answer to prompt 4.
+One number that I don't trust is the 8 of 8 verified 100% for the shared answers. This is because `p2 verify` only proves that each quote is real, and when I went through and read a06, the main answer had no quote behind it, and some claims carried words Claude added. Therefore, since I was going over a06 already, I was kind of suspicious of the 8 of 8 verified 100%, because the quotes don't back up the claims fully, even though it is correct once you combine all the claims. Across all 8 answers, I would need to see that every single quote provided perfect evidence for every single claim. On top of that, the perfect 8 of 8 had a 95% interval of [0.676, 1.000]. So even looking at that, I wouldn't trust it 100%.
 
 ---
 
