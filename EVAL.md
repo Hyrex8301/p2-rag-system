@@ -144,7 +144,17 @@ Then read three in-corpus answers that `uv run p2 verify` passed.
 For each one, open the cited chunk and say whether the quote really supports the claim next to it.
 The check proves a quote is a real piece of the chunk and cannot prove that it supports the claim, so this reading is the part only you can do.
 
-TODO: write your answer choices and your three-answer audit.
+Rerank answered all 12 questions. This is because it had the best MRR@10 of 0.850. So it put the most relevant section first most often. And each answer only uses the top 5 chunks, so ranking well is important. It cost 2 Claude calls per question, one of them was to re-rank and the other one was to answer. With a total of 24 calls. If we answered with hybrid, we only needed one call per question, which would just be 12 calls.
+
+I didn't change `prompts/answer.txt`. It's still on the lab 13 prompt. And I didn't compare anything against it, so there's no change to report.
+
+a03 had one claim that was supported, it dropped the words "and to visitors", but I don't think it changes the overall claim and support.
+
+For a06, claims 1, 2, and 4 are fully supported, and claim 3 is partly supported. It said, lower than the PEL, but that isn't in the quote, so it is partially supported as it included everything else. And the answer had a main sentence that also included PEL, which is correct, but no quote backs it up. Claude never saw the definition of the PEL. It was in a chunk that wasn't given, so it combined two claims together.
+
+For a07, claims 1, 2, and 3 are partly supported, and claim 4 is supported. Claims 1 and 2 say surface and claim 3 says underground, but that isn't in the quote. Surface and underground are both implied, but the quotes don't say them, so both of them are only partly supported. The overall answer leaves out an exception, but I don't think it changes the overall message.
+
+All 16 of the quotes were real, but in a06's main answer, there was no quote to back it up. And some claims carried words that Claude added, and therefore the check can't prove that it supports the claim.
 
 ---
 
