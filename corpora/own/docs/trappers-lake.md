@@ -1,0 +1,7 @@
+# Trappers Lake
+
+Trappers Lake
+
+Trappers Lake, elevation 9,633 feet (2,936 m), is a lake in the Flat Tops Wilderness Area, which is in the White River National Forest in Colorado, United States. It is located in Garfield County east of the town of Meeker and west of the town of Yampa. The lake is roughly a mile and a half (2.4 km) long and half a mile (800 m) wide reaching depths of 180 feet (55 m). It is surrounded by the Flat Tops Mountains, the most striking of which is the large semicircular Amphitheater which has a height of 11369 ft (3465m). Trappers Lake is the second-largest natural lake in Colorado after Grand Lake.
+There is a large camping area and lodge near the lake. Trappers Lake is an excellent fishing lake for cutthroat trout. All Cutthroat trout larger than 16 inches must be released when caught, and you must keep all brook trout (according to signage around the lake as of August 2023). Only artificial flies and lures are permitted. Motorized boats and wheeled carts for boat transport are prohibited. About 17,000 acres (6,900 ha) of forest surrounding the lake were burned by the Big Fish wildfire, started by lightning, in July 2002.
+The area around the lake was put largely off limits to development in 1920, due to the recommendation of Arthur Carhart, hired by the Forest Service to make a survey for a road around the lake. It was the first such Forest Service property to be set aside in this manner. Because of this, some have considered it the birthplace of the U.S. Wilderness Area system.

@@ -1,0 +1,6 @@
+# East Inlet Trail
+
+East Inlet Trail
+
+The East Inlet Trail in Rocky Mountain National Park is a National Recreation Trail, first built in 1913 to provide access from Grand Lake to a series of lakes 6 miles (9.7 km) to the east of Grand Lake. The trail originates at the east stream inlet to Grand lake: confusingly, it is close to the west portal of the Alva B. Adams Tunnel which conveys water from the west side of the Continental Divide under the park to the east slope of the Rocky Mountains. The trail was developed further in the 1920s, but was still considered to be in poor condition. In the 1930s further improvements were made, and in 1934 workers from the Public Works Administration rebuilt the section between Lone Pine Lake and Lake Verna. In 1940 workers from the Civilian Conservation Corps improved three miles (4.8 km) of trail beyond Adam Falls, building causeway sections through swampy areas. The trail was rebuilt again in 1970, and was improved between 2000 and 2003 with stone steps and handrails at Adam Falls.
+The trail was listed on the National Register of Historic Places on February 28, 2005, and on June 6, 2026, US Secretary of the Interior Doug Burgum designated it as a National Recreation Trail.

@@ -1,0 +1,15 @@
+# Red Mountain Pass
+
+Red Mountain Pass
+
+Red Mountain Pass (elevation 11,018 ft (3,358 m)) is a mountain pass in the San Juan Mountains of western Colorado in the United States.
+The pass straddles a divide that separates Ouray and San Juan counties. The pass is named for the nearby Red Mountain on the northeast side of the pass. The name is derived from the iron-oxide-laden rock that forms their slopes.
+The pass separates the Uncompahgre and Las Animas River watersheds, and also serves as a dividing point between the Uncompahgre and San Juan National Forests. The pass is traversed by the Million Dollar Highway, U.S. Highway 550 between Ouray and Silverton, which is part of the San Juan Skyway Scenic Byway.
+The pass is known for being treacherous in the wintertime due to the steep 8% grade and switchbacks on the north side facing Ouray, though the entire road is paved. Avalanches are frequent, and can block the highway for some time. The lower part of the pass towards Ouray is blasted into near-vertical cliffs of quartzite hundreds of feet above Red Mountain Creek and the Uncompahgre River. This section of road is winding and narrow, and has no shoulder.
+There are an average of seven deaths per year.
+
+Mining district
+The Red Mountain Mining District lies from the divide northward to Ironton Park, halfway down towards Ouray. It was the site of a historic silver boom from 1882 until 1893, including the Yankee Girl and National Belle. Headframes of the old workings are still visible from the highway, as are the remains of the three largest communities: Red Mountain Town, Ironton, and Guston. The sprawling Idarado Mine (Treasury Tunnel) continued digging until the 1970s, and reclamation of tailings is ongoing.
+
+Climate
+At an elevation of 11,200 ft (3,400 m), Red Mountain Pass has a subalpine climate (Köppen Dsc), bordering on an alpine climate (Köppen ETH).

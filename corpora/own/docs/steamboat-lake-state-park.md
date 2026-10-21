@@ -1,0 +1,6 @@
+# Steamboat Lake State Park
+
+Steamboat Lake State Park
+
+Steamboat Lake State Park is a Colorado state park located in Routt County 27 miles (43 km) north of Steamboat Springs, Colorado, and near the community of Hahns Peak Village. The 2,820-acre (1,140 ha) park land west of Hahns Peak was acquired in 1966. It and the 1,101 acres (446 ha) reservoir was opened to the public in 1972. As of 2021 park facilities include a visitors center, a marina, boat ramps, campsites, cabins, picnic sites and 5.5 miles (8.9 km) of hiking trails. Plant communities include sagebrush shrubland, quaking aspen and lodgepole pine forests, willow carr and marsh. Commonly seen mammalian wildlife species include mule deer and red fox. The reservoir attracts many species of shorebirds and waterfowl, including sandhill cranes that nest in the wetland areas.
+The reservoir creating the lake on Willow Creek was completed in 1967 and is fed by many streams including Mill Creek, Floyd Creek, Larson Creek, Dutch Creek, and Deep Creek. Though used for recreation the construction of the dam was partly funded by the owners of the Hayden Generation Station to provide water to cool generators. The present location of the park was homesteaded by James and Rose Wheeler in 1921. The original location of the Wheeler's home was covered by the creation of the lake.

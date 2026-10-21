@@ -1,0 +1,8 @@
+# Cordova Pass
+
+Cordova Pass
+
+Cordova Pass (11,260 feet (3,430 meters)) in southern Colorado lies on the western shoulder of the West Spanish Peak, east of the Culebra Range of the Sangre de Cristo Mountains of the Western United States. Cordova Pass lies just outside the Spanish Peaks Wilderness, a designated Wilderness Area in the San Isabel National Forest. Cordova Pass is reached via the Apishapa Road, a leg of the Scenic Highway of Legends (a designated Colorado and National Forest Service scenic byway). As the National Forest Service does not usually plow the snow, Cordova Pass is normally not accessible from mid-November to late May. Most of the time, the pass may be traversed by passenger vehicles.
+The pass was formerly known prior to 1934 as Apishapa Pass. The Cordova Pass road was completed in 1934 by the Works Progress Administration/Civilian Conservation Corps (WPA/CCC). It was dedicated on September 9, 1934, and named after Jose De Jesus Cordova (1856–1929), who was a man well known in this part of Colorado. For over forty years, he operated a ranch near Aguilar. He helped secure funding for the road project in 1928. Cordova served his community and was elected to three terms as Las Animas County Commissioner.
+There are vault toilets, several picnic tables and a couple of primitive campsites in the summit area. This is a "Fee Area".
+The trailhead for the West Spanish Peak Trail, the Vista Point Trail (handicapped accessible), western terminus of the Wahatoya Trail and the upper end of the Apishapa Trail is on the north/east side of the road at the summit of the pass. About ¼ mile (400m) down the main trail is a plaque signifying the Spanish Peaks are a designated National Natural Landmark.

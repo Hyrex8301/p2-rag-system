@@ -1,0 +1,25 @@
+# High Line Canal
+
+High Line Canal
+
+The High Line Canal (HLC) is a man-made waterway, used for irrigation and recreation, that serves the Denver-Aurora metropolitan area. It begins at a diversion dam on the South Platte River, some 1.8 miles (2.9 km) above the mouth of Waterton Canyon. From its headgate, the HLC runs generally northeast for 66 miles (106 km) (historically 71 miles), passing through Douglas, Arapahoe, Denver, and Adams Counties.
+
+Origin of the name
+
+The High Line Canal is not the only one so named. Others in Colorado include the Farmer's High Line (which flows from Golden passing through Westminster and Thornton); the Government High Line (which irrigates Grand Junction and the surrounding Grand Valley); and the Rocky Ford High Line (which irrigates land in the Arkansas River Valley around Boone, Fowler, Manzanola, and Rocky Ford). Elsewhere in Colorado and in other western states, there are a number of additional canals named "High Line" or "Highline".
+High Line canals are named after the engineering principle by which they are designed. The "high line principle" calls for a canal to follow the contours of the terrain, with a minimal drop in elevation per mile along its course. Thus the canal follows the line of highest possible elevation that allows its flow to be driven by gravity (so that neither pumping nor electricity is required for transporting the water). As a result, High Line canals typically have many twists and turns as they maintain elevation by traversing natural valleys first in an upstream direction, then back down the opposite side, then around dividing ridges, and so on.
+
+Developmental struggles
+The company originally intended to place about 50,000 acres under cultivation, but it had difficulty securing sufficient water because earlier ditches held irrigation rights based on prior claims. Court cases regarding water rights dragged on for years. Because the High Line Canal's water rights were junior to 74 other canals in the South Platte watershed, it was frequently dry. Although the agricultural development that the HLC was meant to spawn never fully materialized, the canal nevertheless nourished the growth of both Denver and its eastern suburb, Aurora. In 1924, Denver Water took over the canal.
+
+Irrigation
+The HLC was designed to carry nearly three-quarters of a billion gallons of water per day, but actually averages only 71 million gallons. The canal today has a water capacity of 600 cu ft/s (17 m3/s). When the Rocky Mountain Arsenal was built in 1942, a lateral was built off the HLC (at about mile 64) in order to supply water to the chemical weapons manufacturing center, and until about 2008, the Rocky Mountain Arsenal National Wildlife Refuge was the furthest-downstream customer that was still taking water delivery via the HLC. However, the canal does not provide a very efficient method of delivering water; Denver Water estimates 60% to 80% of water in the canal is lost to seepage or evaporation. As a result, the Arsenal is now provided with recycled water instead of canal water, and as of 2011, the HLC's last customer is Fairmount Cemetery (at about mile 48). However, Denver Water still occasionally sends water further downstream, in order to water the trees that line the canal's bank. Denver Water has vacated the HLC downstream from mile 66.3 in Green Valley Ranch, and today there is very little visible evidence of the additional five miles that historically extended beyond that point.
+
+Recreation and ownership
+Although the HLC was originally built for the purpose of irrigation, today it is better known to Colorado residents as a source of recreation. For just over a century, the canal itself (and the water flowing through it) was owned by Denver Water, but in 2024 Denver Water transferred ownership of a 45-mile segment of the HLC to Arapahoe County, with a conservation easement held by the High Line Canal Conservancy. The adjoining maintenance road was entirely closed to the public until 1970. Today it remains closed to all unauthorized motor vehicles, but approximately 60 miles (97 km) of the road have been improved for use as a recreational trail open to non-motorized users. Designated a National Landmark Trail, it is a popular destination for Denver's outdoor enthusiasts and is open all year to hikers, bikers, joggers, and (along some segments) equestrians. The High Line Canal Trail is shaded for much of its length by mature cottonwood trees, and the surface of the pathway ranges from hard-packed dirt to concrete. Five agencies have recreational agreements to maintain sections of the trails:
+
+In January 2009, The Trust for Public Land helped place a conservation easement on 20 acres (81,000 m2) of land adjacent to the popular High Line Canal Trail.
+The HLC supplies water to Buell Lake in Cherry Hills Village.
+
+Wildlife
+Deer, ducks, geese, turtles, hawks, herons, pelicans, raccoon, fox, coyotes, mountain lions, and various other animals have been spotted on or around the canal and surrounding trails.

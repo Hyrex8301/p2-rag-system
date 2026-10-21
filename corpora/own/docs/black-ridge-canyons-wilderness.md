@@ -1,0 +1,20 @@
+# Black Ridge Canyons Wilderness
+
+Black Ridge Canyons Wilderness
+
+The Black Ridge Canyons Wilderness (BRCW) is located in western Colorado with a small portion extending into eastern Utah, USA, within the arid Colorado Plateau region approximately 15 miles (24 km) west of Grand Junction, Colorado. The wilderness lies on the northwest flank of the Uncompahgre Plateau. It is characterized by the high, east-west trending Black Ridge dissected by seven major canyon systems, draining into the Colorado River in Ruby Canyon. Elevations range from 4,700 feet (1,400 m) above sea level along the river to 6,800 feet (2,070 m). Canyons vary in length from several miles to twelve miles in length and may contain interesting side canyons. Geological features in these canyons include spires, windows, giant alcoves and desert varnish. Canyons may reach a depth of almost 1,000 feet (300 m), forming spectacular red rock cliffs. Spring runoff and summer thunderstorms create glistening waterfalls and plunge pools. Rattlesnake Canyon contains the second largest concentration of natural arches in the country. Mee Canyon is even more remote, and contains Arch Tower.
+Vegetation in the meandering canyon bottoms includes grasses, pinyon, juniper, cottonwood, willow and box elder. The upland mesas contain dense stands of pinyon and juniper with some sagebrush parks. Cryptobiotic soils are well developed in the upland areas. Wildlife viewing may include deer, mountain lion, desert bighorn sheep, along with golden and bald eagles. The wilderness area is 75,439 acres (305.29 km2) of which 70,319 acres (284.57 km2) are in Colorado and 5,120 acres (20.72 km2) are in Utah. It was designated by the U.S. Congress in 2000 and is administered by the Bureau of Land Management. The Black Ridge Canyons Wilderness forms the core of the 123,430 acres (500 km2) McInnis Canyons National Conservation Area.
+
+Access
+There are three main access points for the Black Ridge Canyons Wilderness: the front country (Fruita urban-interface), the high country (Black Ridge via Glade Park) and via the Colorado River. Visitors have easy access the front country area year round while the high country and Colorado River access remain accessible only to the most dedicated visitors.
+
+Front Country
+The front country area of the BRCW is located a few minutes from the town of Fruita, Colorado via State Highway 340. This area, known as the "wilderness-urban interface", is a popular destination for local residents and their dogs looking for daily exercise. The Bureau of Land Management maintains three trailheads in this area - Devils Canyon, Fruita Paleontological Area and Pollock Bench.
+
+High Country
+The high country of the BRCW is accessible from the community of Glade Park, Colorado. Visitors to this area are treated to a true wilderness experience in a rough, remote land that provides outstanding opportunities for solitude. The Rattlesnake Canyon area is home to the world's second-largest concentration of natural arches (after Arches National Park).
+Mee Canyon contains a 300-foot (91 m) deep alcove that is accessible only by way of a difficult hiking trail which requires and scrambling over many exposed ledges. Knowles and Jones Canyons offer visitors a true wilderness experience, with outstanding opportunities for solitude and a primitive and unconfined type of recreation.
+
+Colorado River
+
+The Colorado River bisects the McInnis Canyons National Conservation Area and forms the northern boundary of the Black Ridge Canyons Wilderness as it winds its way through Horsethief and Ruby canyons. The river itself is not a part of the wilderness, however floaters are able to hike up many of the main canyons of the area including Rattlesnake Canyon, Moore Canyon, Mee Canyon, and Knowles Canyon. The most popular put in to float this section of the river is the Loma boat launch in Loma, Colorado. Most river users take out in Westwater, Utah, although some continue on through the Class III and IV rapids of Westwater Canyon (permit required).

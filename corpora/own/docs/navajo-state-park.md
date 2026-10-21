@@ -1,0 +1,18 @@
+# Navajo State Park
+
+Navajo State Park
+
+Navajo State Park is a state park of Colorado, USA, on the north shore of Navajo Lake. Touted as Colorado's answer to Lake Powell, this reservoir on the San Juan River begins in Colorado's San Juan Mountains and extends 20 miles (32 km) into New Mexico. Its area is 15,000 acres (6,100 ha), and it has 150 miles (240 km) of shoreline in two states. Park activities include boating, houseboating, fishing, camping, and wildlife viewing. There is a New Mexico state park at the southern end of the lake.
+
+History
+The area where Navajo State Park now sits was originally inhabited by the Ancestral Puebloans who abandoned the area around 1050 A.D. because of a serious drought at that time. The Ute and Navajo tribes settled the area during the 14th century.
+The 10 explorers of the Dominguez–Escalante Expedition were some of the first white men entering the area. Their mission was to create a route from New Mexico to California for the Spaniards. In the early 1880s, the Denver and Rio Grande Western Railroad laid their tracks in the area. The railroad served the area until 1967 and was an important part of the economy.
+The Navajo Dam was constructed in 1962 to provide irrigation water for the Navajo Nation.
+
+Ecology
+Many migratory and resident birds are known in this area, including several species of raptors, pinyon jay, black-billed magpie, common raven, and waterfowl and shorebirds which are attracted to the reservoir. Mule deer are a common sight, as are cottontail rabbit, coyote, red fox, porcupine, striped skunk and ground squirrel. Rare wildlife species present include the river otter (which has been reintroduced to the Piedra River), the bald eagle, and the white pelican (a summer resident). Anglers are attracted by the warm- and cold-water fishing opportunities, which include largemouth and smallmouth bass, crappie, bluegill, catfish, northern pike, rainbow trout and kokanee salmon.
+Park uplands are dominated by pinyon-juniper woodland, sagebrush shrubland and western slope grassland communities. Short-statured pinyon pine and Utah juniper trees with an understory of shrubs and grasses comprise the pinyon-juniper woodland community, occupying dry slopes, hills and mesa tops. Common understory plant species include Gambel oak, big sagebrush, Indian ricegrass, western wheatgrass, galleta and blue grama. The sagebrush shrubland community is dominated by big sagebrush, rabbitbrush, Gambel oak and skunkbrush sumac. This shrub community occupies more mesic slopes and provides understory for the pinyon-juniper community.
+Western slope grasslands support the sod-forming blue grama, galleta and western wheatgrass, and the bunchgrasses Indian ricegrass, needle-and-thread grass and Junegrass. Wetland, riparian and aquatic plant communities have become established around the reservoir, in the San Juan and Piedra river valleys above the reservoir and on ground water seeps.
+
+Geology
+Navajo State Park features a 15,000 surface-acre reservoir formed in the San Juan River Valley of southwestern Colorado. The San Juan River is joined by the Piedra River near the northern park boundary. Uplands within the park are characterized by flat-topped mesas and gently rolling hills, occasionally cut by steep-sided canyons. The uplands are Tertiary sedimentary rocks deposited during Eocene times, which are represented by sandstones and conglomerates of the San Jose and Blanco Basin formations and Telluride Conglomerate. Quaternary surficial deposits are present along both rivers as alluvium, terrace gravels and alluvial fan deposits.

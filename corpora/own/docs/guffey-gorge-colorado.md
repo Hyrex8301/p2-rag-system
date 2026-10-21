@@ -1,0 +1,5 @@
+# Guffey Gorge (Colorado)
+
+Guffey Gorge (Colorado)
+
+Guffey Gorge, also known as Paradise Cove, Guffey Cove, Guffey Gulch (as the locals know it as) is a swimming hole and cliff diving spot on Four Mile Creek about ten miles east of Guffey, Colorado. From mid-May to mid-September, there is a $6 per vehicle day-use fee. Credit card payments are accepted at the Remote Off-grid Kiosk onsite, cash payments are not accepted. There are regulations in place: no alcohol, no overnight camping, no amplified music, no target shooting, no glass, pets must be on a leash, and parking in designated areas only. Visitors are only allowed to use the area between dawn and dusk. It is Located 2 hours southwest of Denver, near a small parking lot alongside CR 112. The cove is a short, but sometimes steep 1/2 mile (one way) hike. This scenic swimming hole can regularly see 300 people a day on weekends in the summer. The top of the cove is marked with a sign warning of the danger of jumping. The trail down to the swimming hole is short and steep.

@@ -1,0 +1,15 @@
+# Gore Canyon
+
+Gore Canyon
+
+Gore Canyon, elevation 6,985 feet (2,129 m), is a short isolated canyon on the upper Colorado River in southwestern Grand County, Colorado in the United States. Steep and rugged, the approximately 3-mile-long (4.8 km) gorge was carved by the river as it passed the northern end of the Gore Range southwest of Kremmling. The Colorado descends from approximately 7,300 ft (2,200 m) to approximately 7,000 ft (2,100 m) over the length of the canyon. The steep walls ascend approximately 1,000 ft (300 m) on either side. The canyon effectively marks the southwestern end of the Middle Park basin in north-central Colorado.
+
+Accessibility
+The canyon is roadless and inaccessible by most traffic, except for the Union Pacific Railroad's Moffat Tunnel Subdivision and whitewater boats. Despite the short length, the canyon presented a formidable obstacle for the railroad, and the building of the line through it was considered a monumental engineering achievement in its day. Although the canyon is not directly accessible by roads, it is possible to view part of the canyon from the Grand County road (CR 1, or Trough Road) that passes along its southern rim, as part of the Colorado River Headwaters National Scenic Byway. The California Zephyr also travels through the canyon.
+
+Whitewater
+Gore Canyon is also famous for its wild class V whitewater. "Captain" Samuel Adams considered it unnavigable by boat during his expedition in the 19th century. The construction of the railroad has added boulders and other hazards that have since made the river even more difficult.
+Today, expert kayakers and rafters frequent the canyon, and now even hold a river festival including races and other river celebrations.The Gore Canyon Whitewater Festival is held every year on the third Saturday of August and is also the host of the US National White Water Rafting Championship. Gore Canyon was first rafted in the 1970s, and now is even available as a commercial river raft trip. Historically the canyon has been run commercially by multiple companies including Timberline adventures, Arkansas Valley Adventure(AVA), and Liquid Descent. Currently the canyon is run commercially by Liquid Descent and Downstream Adventures. Most outfitters agree that Gore Canyon's whitewater is the wildest commercially available whitewater rafting in the state of Colorado, and perhaps in the nation. Those who are brave enough to raft or kayak Gore Canyon will run rapids such as Gore Rapid, Pyrite, and Tunnel Falls. This is true wild water, so for those who are not expert river runners, Gore Canyon is considered a very dangerous section of the Colorado River.
+
+Wildlife
+The canyon is home to pronghorn, bald eagles, and the Colorado River hosts varieties of trout. In 2009, a small herd of bighorn sheep were released in Gore Canyon by the Colorado Parks and Wildlife. This added to an existing herd to help boost the population after declines due to competition with domestic animals, hunting, and disease.

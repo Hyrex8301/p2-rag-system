@@ -1,0 +1,10 @@
+# Los Pinos Pass
+
+Los Pinos Pass
+
+Los Pinos Pass (elevation 10,509 feet (3,203 m)) is a mountain pass in Saguache County of south-central Colorado. It is located in the northern San Juan Mountains, a sub-range of the Rocky Mountains, and divides the waters of Cebolla Creek to the west and Los Pinos Creek to the east. Los Pinos Pass is traversed by Forest Road 788.
+According to the U.S. Board on Geographic Names and as shown on U.S. Geological Survey maps, the spelling of the pass is Los Pinos Pass, however the pronunciation is typically the Spanish Los Piños Pass and some authors use the Spanish spelling.
+
+History
+In 1874, the Hayden Survey found a well established Ute trail traversing Los Pinos Pass. Survey parties used the Ute trail to travel between the Los Pinos Indian Agency southwest over the pass to Cebolla Creek and then upstream to what is now known as Spring Creek Pass on their way to the headwaters of the Rio Grande.
+By the mid-1870s, mining in the San Juan Mountains resulted in the construction of trails and wagon roads connecting the increasing number of new mining camps and growing towns. In 1874 road builder Otto Mears constructed the Saguache and San Juan Toll Road which ran from the town of Saguache west over Cochetopa Pass to the Los Pinos Indian Agency and then on to the Lake Fork of the Gunnison River and Lake City. Authors have mistakenly described the path of this toll road as traversing Los Pinos Pass, but Mears chose a more direct and less troublesome route from the Los Pinos Indian Agency to the Lake Fork. The toll road crossed the divide between the Los Pinos Creek and Cebolla Creek drainages near Summit Park, approximately 6 miles (9.7 km) north of Los Pinos Pass. This was a more direct route following another Ute trail that avoided the steep western decent from Los Pinos Pass and the narrow canyon of Cebolla Creek below. Lt. Ruffner's expedition followed this trail in 1873, and the Hayden Survey documented this route in 1874, the year the road was built. During this period Los Pinos Pass remained a trail suitable for foot and livestock travel.

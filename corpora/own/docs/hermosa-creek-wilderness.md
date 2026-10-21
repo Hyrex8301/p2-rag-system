@@ -1,0 +1,19 @@
+# Hermosa Creek Wilderness
+
+Hermosa Creek Wilderness
+
+The Hermosa Creek Wilderness is a 37,236-acre (15,069 ha) U.S. Wilderness Area in La Plata County, Colorado. It s located in the San Juan National Forest 12 miles (19 km) north of Durango. It was established by the Hermosa Creek Protection Act of 2014, which also created the adjacent Hermosa Creek Special Management Area, which shares its eastern border, Hermosa Creek. Elevation in the wilderness ranges from 7,500 feet (2,300 m) along Hermosa Creek to 12,338 feet (3,761 m) at the high point of Indian Trail Ridge.
+
+Geology
+Sedimentary rocks form the landscape of the Hermosa Creek Wilderness. The majority of the wilderness consists of beds of Paleozoic sediments. The oldest rocks, from the Molas and Hermosa formations (Pennsylvanian), were deposited in marine environments. Then, in the Permian period, there was a transition from marine to terrestrial deposits in the area as the Uncompahgre Highland was uplifted to the north. Sediments eroded from these mountains were deposited here and are found in the Rico and Cutler formations.
+Along Indian Trail Ridge, the highest terrain in the wilderness, the Paleozoic sediments are capped by younger Jurassic sedimentary rocks of the Dolores Formation. Along the southern, highest extent of Indian Trail Ridge, there are yet younger Jurassic rocks of the Morrison Formation and Entrada Sandstone that cap the ridge.
+Noticeably lacking in the wilderness are volcanic lavas, tuffs, and conglomerates common in other areas of the San Juan Mountains.
+The wilderness was weakly glaciated, and the area lacks distinctive glacial features. Glacial processes along the eastern side of Indian Trail Ridge show subtle cirque characteristics.
+
+Flora and fauna
+Over 90% of the wilderness is forested, and the most common vegetation type, occupying 42% of the wilderness, is subalpine forest dominated by Engelmann spruce and subalpine fir. While the wilderness has experienced repeated disturbances through the years, one third of the spruce-fir forests here are old growth stands that have avoided decimating fires, disease, insect outbreaks, and logging for centuries. Below the subalpine forests are montane forests where Douglas fir is often dominant. Southwestern white pine, white fir, ponderosa pine, and Colorado blue spruce are also found. Significant stands of aspen occur in the wilderness on historically disturbed sites in both the subalpine and montane zones. Aspen stands cover 27% of the wilderness.
+Less common in the wilderness are meadows and shrublands. Alpine tundra, dominated by grasses and forbs, is limited to only the highest elevations of Indian Trail Ridge along the western margin of the wilderness.
+The wilderness provides habitat for mule deer and elk, both popular game animals. Other mammals include black bears, bobcats, coyotes, martens, porcupines, marmots, chickarees, and pikas. Waters in the wilderness are home to the native Colorado River cutthroat trout. Also present are two non-native, introduced species: brook trout and rainbow trout.
+
+Hiking
+Travel through the wilderness is limited to those on foot and horseback. There are only two trails in the wilderness, and both follow creeks from their headwaters on the western border of the wilderness down to the eastern border of the wilderness along Hermosa Creek. The Salt Creek Trail (Forest Trail 559) is 5.6 miles (9.0 km) long and descends 2,600 feet (792 m) in elevation. The Clear Creek Trail (Forest Trail 550) is 7.2 miles (11.6 km) long and descends 2,800 feet (853 m) in elevation. Only one trailhead provides direct access to these trails. The Clear Creek Trailhead (elevation 10,180 feet (3,103 m)) allows access to the western terminus of the Clear Creek Trail. Accessing either end of the Salt Creek Trail and the eastern terminus of the Clear Creek requires hiking on popular mechanized (bicycle) and motor vehicle use trails that encircle the wilderness.

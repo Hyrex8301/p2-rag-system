@@ -1,0 +1,25 @@
+# Aspen Mountain (ski area)
+
+Aspen Mountain (ski area)
+
+Aspen Mountain (often called by its former name of Ajax among locals) is a ski area in the western United States, located in Pitkin County, Colorado, just outside and above the city of Aspen. Aspen Mountain forms the end of Richmond Ridge, a long ridge that extends ten miles (16 km) south at approximately 11,000 ft (3,350 m) to join the main spine of the Elk Mountains.
+Founded 80 years ago in 1946 by Walter Paepcke, Aspen was the first ski area venture of the Aspen Skiing Company. It is one of four adjacent ski areas operated by the company as part of the Aspen/Snowmass complex. At only 673 acres (2.7 km2), it is somewhat small compared to other ski areas, especially compared to the much larger nearby Snowmass ski area, and retains a unique cultural flavor that harkens to the earlier days of recreational skiing in the state. The ski area is located within the White River National Forest and is operated under a permit from the U.S. Forest Service. It has three restaurants on the mountain; two are on top (one is a club that only allows members), and one is mid-mountain.
+
+History and description
+
+Before 1946, the mountain had been the site of skiing, which used a crude boat lift and jeep trails up the back side of the mountain on Midnight Mine Road. In 1941, Aspen's first national downhill and slalom championships were held March 8–9. Fritz Benedict, the father of the 10th Mountain Hut and Trail System, visited Aspen for the first time. The foundation of the ski area in 1946 was accomplished with the installation of the single-seat chairlift, Lift-1. When it began operations on December 14, 1946, it was the longest chairlift in the world.
+Many of the first employees were veterans of the U.S. Army's 10th Mountain Division, which had trained in Colorado at Camp Hale north of Leadville, including Friedl Pfeifer of Austria and Pete Seibert. Before the war, Pfeifer had headed the ski school at Sun Valley and did the same at Aspen; Seibert was a member of the Aspen ski patrol who later founded Vail Mountain in 1962. In its fourth season, Aspen hosted the 1950 World Championships, the first world championships held outside of Europe, and the first since 1939.
+Lift-1 ran until 1972, when it was replaced by two double chairlifts, Shadow Mountain (commonly referred to as 1A) and Ruthie's. Access to the mountain was radically changed in 1986 with the installation of the Silver Queen Gondola, which ascends to the summit up the east side of the area with a vertical rise of 3,267 ft (996 m). The area's lifts include 1 high-speed quad, one high-speed triple, two quads, and three doubles.
+The gondola is one of two lifts, along with the Little Nell chairlift, which ascends from Gondola Plaza in the heart of downtown Aspen. The configuration allows visitors to ascend the mountain from the town center and ski down the Little Nell Run back into town. The mountainside contains hidden and open remains of the intense silver mining activity from the Colorado Silver Boom in the late 1880s and early 1890s. In January 2001, it was decided to end Aspen Mountain's long-time ban on snowboarding. However, as a courtesy to season-pass holders, the resort was not officially opened to snowboarders until April 1, 2001.
+The longest run is three miles (5 km), and the lift capacity is 10,755 riders per hour. The average annual snowfall is 300 inches (25 ft; 7.6 m), and it has snowmaking capabilities of 210 acres (0.85 km2), approximately one-third of the area. The mountain is considered moderate to difficult, with no "green" (beginner) runs. Its sister mountain, Aspen Highlands, also has no beginner terrain as of December 2017. Novice skiers must go to Snowmass or Buttermilk. Approximately 26% of the terrain is considered expert. The season on the mountain ranges from late November to early April. It is typically the last area, along with nearby Snowmass, in the resort complex to close for the winter.
+The ski area has a unique "homespun" culture that dates from its early foundation as part of the Utopian social experiment in Aspen created by Walter Paepcke in the 1940s, retaining somewhat of a throwback culture in comparison to the other three areas of the complex. The culture is reflected in the numerous homemade memorials and tributes that dot the trees of mountains created in honor of famous personages such as John Denver and Hunter S. Thompson.
+It is rumored that under the Bell Mountain lift on Aspen Mountain was the home of the first Panty tree of bras, panties, thongs, and Mardi Gras necklaces as early as the late 1950s.
+A small lodging, shopping, and residential development is under development near the ski lift at Aspen Mountain. The ski lift itself will be moved closer to town. Originally proposed by a group with Aspen creds, it narrowly passed a vote in Aspen. However, it was soon sold, at a substantial profit, to the OKO Group, an international real estate development company owned by Vladislav Doronin, a controversial transaction.
+
+Terrain
+Trails: 76
+North: 50%
+East: 27%
+West: 23%
+
+Spring skiing on Aspen Mountain

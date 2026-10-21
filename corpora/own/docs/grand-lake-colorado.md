@@ -1,0 +1,10 @@
+# Grand Lake (Colorado)
+
+Grand Lake (Colorado)
+
+Grand Lake is Colorado's largest and deepest natural lake. It is located in the headwaters of the Colorado River in Grand County, Colorado. On its north shore is located the historic and eponymous town of Grand Lake. The lake was formed during the Pinedale glaciation, which occurred from 30000 BC to 10000 BC. The glacial terminal moraine created a natural dam. Natural tributaries to the lake are the North Inlet and East Inlet, both of which flow out of Rocky Mountain National Park, which surrounds the lake on three sides. Grand Lake is located 1 mile from the Park's western entrance. Grand Lake was named Spirit Lake by the Ute Tribe because they believed the lake's cold waters to be the dwelling place of departed souls.
+
+Colorado-Big Thompson Project
+As part of the Colorado-Big Thompson Project,
+Grand Lake forms a continuous body of water with the man-made reservoir Shadow Mountain Lake, which under natural conditions then flows into another man-made reservoir, Lake Granby. The elevation of Grand Lake is maintained between 8,367 ft (2550.3 m) and 8,366 ft (2550.0 m). When the Colorado-Big Thompson (C-BT) project is diverting water to northeastern Colorado, water collected in Lake Granby can be pumped back into Shadow Mountain where it flows backward into Grand Lake, then under Rocky Mountain National Park and the Continental Divide via the Alva B. Adams Tunnel to the Big Thompson River on the eastern slope of the Rocky Mountains. From there, the water flows into the South Platte River and is used for agriculture, municipal, and industrial purposes. Diverted C-BT water provides fuel to five power stations for hydroelectric power generation on the eastern slope of the Colorado Rockies.
+The C-BT is one of the first of many large-scale diversions of water from the Colorado River Basin between Colorado and the Gulf of California. Because the C-BT Project moves water from the Colorado Basin to the South Platte Basin the project is considered a transbasin diversion.
