@@ -82,4 +82,4 @@ One thing in your system, your corpus or your gold set that is not right, not fi
 What would you do next, and how would you find out whether it matters?
 Name the file, the query or the document where someone could look.
 
-TODO: your answer to prompt 5.
+I think that my gold set is still too easy. This can be found in `eval/own/queries.tsv`. This is because the re-rank scores are 1 and the queries share 78% of the words with their answers. The next thing I would do is write harder hand queries that describe a place without its words before reading the article. And I expect this would change the re-rank score to be a little bit lower than 1. This is important because if re-rank drops below 1, this would also allow for BM25's lead over dense to go down a little bit, and I expect it would not stay at the top. So if we make the queries a little bit harder in what you'd actually most likely see in a typical query, it would be a lot better.
