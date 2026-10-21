@@ -152,6 +152,7 @@ Scores per system on your gold set.
 | dense | 0.871 | 0.839 | 0.793 |
 | hybrid | 0.962 | 0.892 | 0.886 |
 | rerank | 0.984 | 1.000 | 0.986 |
+| ablation/dense_c100 | 0.984 | 0.816 | 0.847 |
 
 31 judged queries; nDCG uses binary labels; a random ranking of the 278 documents would get recall@10 near 0.036.
 <!-- p2:end own -->
@@ -173,6 +174,9 @@ The same scores per query class.
 | rerank | Recall@10 | 1.000 | 1.000 | 0.929 |
 | rerank | MRR@10 | 1.000 | 1.000 | 1.000 |
 | rerank | nDCG@10 | 0.996 | 1.000 | 0.945 |
+| ablation/dense_c100 | Recall@10 | 0.950 | 1.000 | 1.000 |
+| ablation/dense_c100 | MRR@10 | 0.613 | 0.917 | 0.905 |
+| ablation/dense_c100 | nDCG@10 | 0.694 | 0.938 | 0.885 |
 <!-- p2:end own-classes -->
 
 The same scores for the queries you wrote yourself (`hand`) and the ones a model drafted (`claude`), with the difference between the two groups and its interval.
@@ -193,6 +197,9 @@ Once both groups have queries, the table also says whether `bm25`'s lead over `d
 | rerank | Recall@10 | 1.000 | 0.976 | +0.024 | [+0.000, +0.071] | not distinguishable |
 | rerank | MRR@10 | 1.000 | 1.000 | +0.000 | [+0.000, +0.000] | not distinguishable |
 | rerank | nDCG@10 | 1.000 | 0.980 | +0.020 | [+0.000, +0.059] | not distinguishable |
+| ablation/dense_c100 | Recall@10 | 0.950 | 1.000 | -0.050 | [-0.150, +0.000] | not distinguishable |
+| ablation/dense_c100 | MRR@10 | 0.737 | 0.854 | -0.117 | [-0.351, +0.112] | not distinguishable |
+| ablation/dense_c100 | nDCG@10 | 0.775 | 0.882 | -0.107 | [-0.298, +0.075] | not distinguishable |
 
 The hand and claude queries are different queries, so the interval of hand minus claude comes from resampling the queries within each group (10,000 times), not from pairing them.
 
@@ -232,6 +239,18 @@ Differences between every pair of systems.
 | rerank minus hybrid | Recall@10 | +0.022 | [-0.043, +0.102] | 0.103 | not distinguishable |
 | rerank minus hybrid | MRR@10 | +0.108 | [+0.027, +0.204] | 0.133 | rerank higher |
 | rerank minus hybrid | nDCG@10 | +0.100 | [+0.027, +0.190] | 0.119 | rerank higher |
+| ablation/dense_c100 minus bm25 | Recall@10 | +0.016 | [-0.048, +0.097] | 0.102 | not distinguishable |
+| ablation/dense_c100 minus bm25 | MRR@10 | -0.083 | [-0.178, +0.004] | 0.133 | not distinguishable |
+| ablation/dense_c100 minus bm25 | nDCG@10 | -0.055 | [-0.132, +0.021] | 0.111 | not distinguishable |
+| ablation/dense_c100 minus dense | Recall@10 | +0.113 | [+0.032, +0.210] | 0.141 | ablation/dense_c100 higher |
+| ablation/dense_c100 minus dense | MRR@10 | -0.023 | [-0.116, +0.068] | 0.133 | not distinguishable |
+| ablation/dense_c100 minus dense | nDCG@10 | +0.054 | [-0.021, +0.132] | 0.111 | not distinguishable |
+| ablation/dense_c100 minus hybrid | Recall@10 | +0.022 | [-0.043, +0.102] | 0.103 | not distinguishable |
+| ablation/dense_c100 minus hybrid | MRR@10 | -0.076 | [-0.160, -0.004] | 0.115 | hybrid higher |
+| ablation/dense_c100 minus hybrid | nDCG@10 | -0.038 | [-0.111, +0.025] | 0.101 | not distinguishable |
+| ablation/dense_c100 minus rerank | Recall@10 | +0.000 | [-0.048, +0.048] | 0.065 | not distinguishable |
+| ablation/dense_c100 minus rerank | MRR@10 | -0.184 | [-0.294, -0.083] | 0.152 | rerank higher |
+| ablation/dense_c100 minus rerank | nDCG@10 | -0.139 | [-0.231, -0.053] | 0.128 | rerank higher |
 
 The interval is a paired bootstrap (10,000 resamples of the queries); MDD is the smallest difference this many queries detect 80% of the time.
 <!-- p2:end own-pairs -->
@@ -254,14 +273,42 @@ The run file for it lives in `runs/own/ablation/`.
 The articles that I have are a lot longer when compared to the regulation sections. So having a smaller chunk will hold fewer topics, but it will be more precise as the facts in the chunk take up a larger portion. For example, when looking at Cheyenne Mountain State Park article, it is hard to find information about dogs and is buried. Therefore, by lowering the words in the chunk, you are able to see the information about dog allowability as it has its own section in the chunk. From this, I expect it to raise MRR@10. But it will make generic statements less accurate while having the precise question more accurate.
 
 <!-- p2:begin own-ablation -->
-_No ablation runs yet: `uv run p2 run --corpus own --system NAME --ablation` writes one to runs/own/ablation/, then `uv run p2 score` fills this table._
+| Comparison | Metric | Mean difference | 95% interval | MDD | Reading |
+| --- | --- | ---: | ---: | ---: | --- |
+| ablation/dense_c100 minus bm25 | Recall@10 | +0.016 | [-0.048, +0.097] | 0.102 | not distinguishable |
+| ablation/dense_c100 minus bm25 | MRR@10 | -0.083 | [-0.178, +0.004] | 0.133 | not distinguishable |
+| ablation/dense_c100 minus bm25 | nDCG@10 | -0.055 | [-0.132, +0.021] | 0.111 | not distinguishable |
+| ablation/dense_c100 minus dense | Recall@10 | +0.113 | [+0.032, +0.210] | 0.141 | ablation/dense_c100 higher |
+| ablation/dense_c100 minus dense | MRR@10 | -0.023 | [-0.116, +0.068] | 0.133 | not distinguishable |
+| ablation/dense_c100 minus dense | nDCG@10 | +0.054 | [-0.021, +0.132] | 0.111 | not distinguishable |
+| ablation/dense_c100 minus hybrid | Recall@10 | +0.022 | [-0.043, +0.102] | 0.103 | not distinguishable |
+| ablation/dense_c100 minus hybrid | MRR@10 | -0.076 | [-0.160, -0.004] | 0.115 | hybrid higher |
+| ablation/dense_c100 minus hybrid | nDCG@10 | -0.038 | [-0.111, +0.025] | 0.101 | not distinguishable |
+| ablation/dense_c100 minus rerank | Recall@10 | +0.000 | [-0.048, +0.048] | 0.065 | not distinguishable |
+| ablation/dense_c100 minus rerank | MRR@10 | -0.184 | [-0.294, -0.083] | 0.152 | rerank higher |
+| ablation/dense_c100 minus rerank | nDCG@10 | -0.139 | [-0.231, -0.053] | 0.128 | rerank higher |
+
+The interval is a paired bootstrap (10,000 resamples of the queries); MDD is the smallest difference this many queries detect 80% of the time.
 <!-- p2:end own-ablation -->
 
 The queries your ablation helped and hurt, against the system it varies, by reciprocal rank.
 `p2 score` finds that system from a line such as `BASE = "bm25"` in your variant's file, or else from its name: `bm25_lab` varies `bm25`.
 
 <!-- p2:begin own-ablation-queries -->
-_No ablation runs yet: `uv run p2 run --corpus own --system NAME --ablation` writes one to runs/own/ablation/, then `uv run p2 score` fills this table._
+ablation/dense_c100 against dense (BASE = "dense" in p2/retrievers/dense_c100.py): it helped 4 queries, hurt 4 and left 23 unchanged.
+
+| Query | Class | Origin | dense RR | ablation/dense_c100 RR | Change | Effect |
+| --- | --- | --- | ---: | ---: | ---: | --- |
+| c09 | paraphrase | claude | 0.250 | 1.000 | +0.750 | helped |
+| c18 | paraphrase | claude | 0.000 | 0.333 | +0.333 | helped |
+| c12 | paraphrase | claude | 0.250 | 0.500 | +0.250 | helped |
+| c01 | paraphrase | claude | 0.000 | 0.100 | +0.100 | helped |
+| h05 | paraphrase | hand | 1.000 | 0.200 | -0.800 | hurt |
+| h10 | identifier | hand | 1.000 | 0.333 | -0.667 | hurt |
+| c20 | paraphrase | claude | 1.000 | 0.500 | -0.500 | hurt |
+| h09 | mixed | hand | 0.500 | 0.333 | -0.167 | hurt |
+
+RR is the reciprocal rank of the first relevant document in the top 10 (0 when none is there), the per-query value behind MRR@10; the queries at the top of each list are the ones to read.
 <!-- p2:end own-ablation-queries -->
 
 What did you change, what happened, and does the interval support the claim you want to make?
@@ -356,6 +403,7 @@ Systems that do not call Claude, from traces/retrieval/ on the machine that last
 
 | Trace | System | Queries | Seconds | Milliseconds per query |
 | --- | --- | ---: | ---: | ---: |
+| traces/retrieval/own-own-ablation-dense_c100.jsonl | dense_c100 | 31 | 0.15 | 4.7 |
 | traces/retrieval/own-own-bm25.jsonl | bm25 | 31 | 0.01 | 0.4 |
 | traces/retrieval/own-own-dense.jsonl | dense | 31 | 0.14 | 4.7 |
 | traces/retrieval/own-own-hybrid.jsonl | hybrid | 31 | 0.15 | 4.9 |
