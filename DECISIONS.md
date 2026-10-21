@@ -59,7 +59,7 @@ What did you do instead?
 If it genuinely never happened, say so plainly, and then say what you would have had to check in order to notice.
 Being honest here costs you far less than a story you cannot defend when you record your video.
 
-TODO: your answer to prompt 3.
+I overruled the agent in several occasions. The first one, when I was trying to decide my corpus, I had Claude give me multiple ideas, and it was strongly recommending that I take video games, but I wanted to do the Colorado outdoors instead, so we went with that. Next, on my h05's judgment, Claude warned me that marking Guffey Gorge and Hanging Lake might bend my strict rule, since each states only part of the answer, and I marked both as correct anyway. For c04, number 3 Aspen, Claude pointed out that its sentence says trained in the area without naming the place, and I counted that as relevant: since the article is about Aspen, 'the area' means the Aspen area, which I counted as stating where they trained. Other than that, there wasn't too much overruling. And I would have to check over a lot of the articles myself to make sure that Claude was doing everything correctly. As well as scan over the RAG code and make sure that everything there is working as well. Instead of just taking Claude's word for it and making sure all the tests ran as well.
 
 ---
 
