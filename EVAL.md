@@ -117,7 +117,15 @@ Which differences are distinguishable from zero and which are not?
 What is the minimum detectable difference at 20 queries, and what does that say about any gap smaller than it?
 Which claim from lecture 12 or 13 did your numbers support, and which did they leave open?
 
-TODO: write what the practice-query intervals let you claim.
+Re-rank is higher than any of the other three, as all three intervals are above 0. This shows that rerank is higher, by somewhere between 0.05 and 0.39 against hybrid, against bm25 it's [+0.100, +0.576], and against dense it's [+0.117, +0.471]. However, this is only true on the 20 practice queries.
+
+The other three are not as distinguishable. For example dense - bm25 has the interval [−0.225, +0.343] so the real difference can be large in either direction. 20 queries is not able to tell.
+
+The minimum detectable difference at 20 queries is 0.27 to 0.41, for BM25 dense and hybrid, and 0.24 to 0.34 for anything involving the re-rank. Therefore, when we're looking at the 20 queries, you can't reliably see a difference of that size, even if there is a difference. Each of 0.055, 0.135, and 0.079 is smaller than its MDD, so it being non distinguishable doesn't make the systems equal.
+
+In lecture 12, we found that every retriever has a failure that we can predict and measure. And this was shown when the BM25 scored 0 on the paraphrase, and 0.810 on identifiers, this was very clear that BM25 is pretty bad at paraphrasing, and just can't do very well on it. While if it has to identify something very specific, it can do that. And dense scored 0.333 on identifiers, and 0.714 on paraphrases. And this makes sense, as dense was expected to have scored higher on paraphrases which it did. However, this was only tested over 7 queries per class.
+
+In lecture 13, Fusion helps a weaker partner and hurts an already strong retriever. On identifiers, fusion pulled BM25, which was the strong system, down from (0.810) to (0.571). While on paraphrases, it lifted the weak one, BM25, from 0 to 0.571, but pulled dense down from 0.714 to 0.571. Hybrid isn't distinguishable from either system as its intervals include 0. The class pattern points towards the fusion claim but with 7 queries per class and a non distinguishable result the claim stays open. Lecture 13 also says that the re-ranker cannot rescue a document that is not among its candidates. And this was shown in P10 and P14, that are both paraphrases where no relevant section was in the first stage's top 20. And re-rank found no relevant section in its top 10 for either of them.
 
 ---
 
