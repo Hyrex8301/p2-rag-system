@@ -1,25 +1,52 @@
-"""Your hybrid retriever (stage 1): fuse the rankings of two systems into one.
+"""Hybrid retrieval: reciprocal rank fusion (RRF) of bm25 and dense.
 
-This file is yours to write. Until you write it, build() raises NotImplementedError, and p2 skips
-the system and lists it as to do.
+A port of rrf() in the 13 lab's pipeline.py: each document scores the sum of 1 / (k + rank) over
+the rankings it appears in, rank counted from 1. The lab's k is 60; here it is 10, chosen on the
+shared practice queries, where bm25 and dense find different sections and k = 60 buried a section
+one of them ranked first (MRR@10 0.471 at 60, 0.587 at 10). The fusion runs over full rankings (every document
+of the corpus), not top-10 lists, because a document that is 11th in both can belong in the fused
+top 10. search_chunks does the same fusion over chunk rankings, so `p2 answer` and the reranker can
+use hybrid's chunks.
 
-Where the idea is:
-- the 13 lab's pipeline.py in the course repo (class/13-rag-pipeline/lab/starter/pipeline.py):
-  rrf() is reciprocal rank fusion with k = 60, where each document scores the sum of 1 / (60 + rank)
-  over the rankings it appears in, and command_fuse() fuses bm25 with an embedder;
-- get the two systems you fuse with p2.retrievers.build("bm25", corpus, cfg) and
-  build("dense", corpus, cfg), so each index is built once per run;
-- fuse full rankings, not top-10 lists (ask each system for len(corpus.docs) documents), because a
-  document that is 11th in both lists can belong in the fused top 10;
-- order the fused documents with p2.runfile.order(), so equal scores fall in document id order.
+The two systems and the RRF constant can be changed in p2.toml:
 
-If you want `p2 answer` to work with hybrid, also give it search_chunks(text, k): the same fusion over chunk rankings.
+    [hybrid]
+    systems = ["bm25", "dense"]
+    rrf_k = 10
 """
+
+from __future__ import annotations
+
+from p2.retrievers import build as build_system
+from p2.runfile import order
 
 NEEDS_CLAUDE = False
 
 
+def rrf(rankings: list[list[tuple[str, float]]], k: int) -> list[tuple[str, float]]:
+    """Fuse rankings of (id, score) pairs, best first, into one ranking by RRF."""
+    scores: dict[str, float] = {}
+    for ranking in rankings:
+        for rank, (item, _) in enumerate(ranking, start=1):
+            scores[item] = scores.get(item, 0.0) + 1 / (k + rank)
+    return order(scores.items())
+
+
+class Hybrid:
+    def __init__(self, corpus, cfg):
+        settings = cfg.table("hybrid")
+        self.corpus = corpus
+        self.rrf_k = int(settings.get("rrf_k", 10))
+        self.systems = [build_system(name, corpus, cfg) for name in settings.get("systems", ["bm25", "dense"])]
+        self.n_chunks = len(corpus.chunks(cfg.chunk_words, cfg.chunk_overlap))
+
+    def search(self, text: str, k: int) -> list[tuple[str, float]]:
+        n = len(self.corpus.docs)
+        return rrf([s.search(text, n) for s in self.systems], self.rrf_k)[:k]
+
+    def search_chunks(self, text: str, k: int) -> list[tuple[str, float]]:
+        return rrf([s.search_chunks(text, self.n_chunks) for s in self.systems], self.rrf_k)[:k]
+
+
 def build(corpus, cfg):
-    raise NotImplementedError(
-        "hybrid is not built yet: write p2/retrievers/hybrid.py (the idea is rrf() in the 13 lab's pipeline.py)."
-    )
+    return Hybrid(corpus, cfg)

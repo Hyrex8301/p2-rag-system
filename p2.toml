@@ -24,6 +24,12 @@ tokenizer = "codes"
 k1 = 0.9
 b = 0.4
 
+[hybrid]
+# Reciprocal rank fusion of these two systems; a smaller rrf_k trusts each one's top ranks more.
+# 10, not the lab's 60, chosen on the shared practice queries (MRR@10 0.587 against 0.471).
+systems = ["bm25", "dense"]
+rrf_k = 10
+
 [answer]
 # How many chunks `p2 answer` sends to Claude with each question.
 top = 5
